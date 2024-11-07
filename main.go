@@ -75,7 +75,8 @@ func updateDisplay() {
 	currentPriceString := "?"
 	currentPrice, err := currentPrice(relevantPrices)
 	if err == nil {
-		currentPriceString = fmt.Sprintf("%d¢", roundedPrice(currentPrice.Total))
+		// currentPriceString = fmt.Sprintf("%d¢", roundedPrice(currentPrice.Total))
+		currentPriceString = fmt.Sprintf("%d", roundedPrice(currentPrice.Total))
 	}
 
 	commandsText := []AwtrixDrawCommand{{Command: "dt", X: 0, Y: 1, Text: currentPriceString, Color: "#FFFFFF"}}

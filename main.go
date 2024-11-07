@@ -29,7 +29,7 @@ func main() {
 		updateDisplay()
 
 		log.Printf("Sleeping for 1 hour")
-		time.Sleep(1 * time.Min)
+		time.Sleep(1 * time.Minute)
 	}
 }
 

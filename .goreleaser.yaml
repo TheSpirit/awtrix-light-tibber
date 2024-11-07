@@ -30,7 +30,7 @@ changelog:
       - '^test:'
 
 dockers:
-- image_templates: ["stefanwichmann/{{ .ProjectName }}:{{ .Version }}-amd64"]
+- image_templates: ["thespirit/{{ .ProjectName }}:{{ .Version }}-amd64"]
   goos: linux
   goarch: amd64
   dockerfile: Dockerfile
@@ -38,14 +38,14 @@ dockers:
   - --platform=linux/amd64
   - --label=org.opencontainers.image.title={{ .ProjectName }}
   - --label=org.opencontainers.image.description={{ .ProjectName }}
-  - --label=org.opencontainers.image.url=https://github.com/stefanwichmann/{{ .ProjectName }}
-  - --label=org.opencontainers.image.source=https://github.com/stefanwichmann/{{ .ProjectName }}
+  - --label=org.opencontainers.image.url=https://github.com/thespirit/{{ .ProjectName }}
+  - --label=org.opencontainers.image.source=https://github.com/thespirit/{{ .ProjectName }}
   - --label=org.opencontainers.image.version={{ .Version }}
   - --label=org.opencontainers.image.created={{ time "2006-01-02T15:04:05Z07:00" }}
   - --label=org.opencontainers.image.revision={{ .FullCommit }}
   - --label=org.opencontainers.image.licenses=MIT
 
-- image_templates: ["stefanwichmann/{{ .ProjectName }}:{{ .Version }}-armv7"]
+- image_templates: ["thespirit/{{ .ProjectName }}:{{ .Version }}-armv7"]
   goos: linux
   goarch: arm
   goarm: 7
@@ -54,14 +54,14 @@ dockers:
   - --platform=linux/arm/v7
   - --label=org.opencontainers.image.title={{ .ProjectName }}
   - --label=org.opencontainers.image.description={{ .ProjectName }}
-  - --label=org.opencontainers.image.url=https://github.com/stefanwichmann/{{ .ProjectName }}
-  - --label=org.opencontainers.image.source=https://github.com/stefanwichmann/{{ .ProjectName }}
+  - --label=org.opencontainers.image.url=https://github.com/thespirit/{{ .ProjectName }}
+  - --label=org.opencontainers.image.source=https://github.com/thespirit/{{ .ProjectName }}
   - --label=org.opencontainers.image.version={{ .Version }}
   - --label=org.opencontainers.image.created={{ time "2006-01-02T15:04:05Z07:00" }}
   - --label=org.opencontainers.image.revision={{ .FullCommit }}
   - --label=org.opencontainers.image.licenses=MIT
 
-- image_templates: ["stefanwichmann/{{ .ProjectName }}:{{ .Version }}-arm64"]
+- image_templates: ["thespirit/{{ .ProjectName }}:{{ .Version }}-arm64"]
   goos: linux
   goarch: arm64
   dockerfile: Dockerfile
@@ -69,22 +69,22 @@ dockers:
   - --platform=linux/arm64/v8
   - --label=org.opencontainers.image.title={{ .ProjectName }}
   - --label=org.opencontainers.image.description={{ .ProjectName }}
-  - --label=org.opencontainers.image.url=https://github.com/stefanwichmann/{{ .ProjectName }}
-  - --label=org.opencontainers.image.source=https://github.com/stefanwichmann/{{ .ProjectName }}
+  - --label=org.opencontainers.image.url=https://github.com/thespirit/{{ .ProjectName }}
+  - --label=org.opencontainers.image.source=https://github.com/thespirit/{{ .ProjectName }}
   - --label=org.opencontainers.image.version={{ .Version }}
   - --label=org.opencontainers.image.created={{ time "2006-01-02T15:04:05Z07:00" }}
   - --label=org.opencontainers.image.revision={{ .FullCommit }}
   - --label=org.opencontainers.image.licenses=MIT
 
 docker_manifests:
-- name_template: stefanwichmann/{{ .ProjectName }}:{{ .Version }}
+- name_template: thespirit/{{ .ProjectName }}:{{ .Version }}
   image_templates:
-  - stefanwichmann/{{ .ProjectName }}:{{ .Version }}-amd64
-  - stefanwichmann/{{ .ProjectName }}:{{ .Version }}-armv7
-  - stefanwichmann/{{ .ProjectName }}:{{ .Version }}-arm64
+  - thespirit/{{ .ProjectName }}:{{ .Version }}-amd64
+  - thespirit/{{ .ProjectName }}:{{ .Version }}-armv7
+  - thespirit/{{ .ProjectName }}:{{ .Version }}-arm64
 
-- name_template: stefanwichmann/{{ .ProjectName }}:latest
+- name_template: thespirit/{{ .ProjectName }}:latest
   image_templates:
-  - stefanwichmann/{{ .ProjectName }}:{{ .Version }}-amd64
-  - stefanwichmann/{{ .ProjectName }}:{{ .Version }}-armv7
-  - stefanwichmann/{{ .ProjectName }}:{{ .Version }}-arm64
+  - thespirit/{{ .ProjectName }}:{{ .Version }}-amd64
+  - thespirit/{{ .ProjectName }}:{{ .Version }}-armv7
+  - thespirit/{{ .ProjectName }}:{{ .Version }}-arm64
